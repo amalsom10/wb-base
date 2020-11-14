@@ -1,0 +1,17 @@
+{{ with .Site.Data.employment }}
+  <section class="thirteen columns">
+    <h1>{{ .name }}</h1>
+    {{ range .source }}
+    <article>
+      <header>
+        <h1>{{ .prof }}</h1>
+        <span>
+          <address>{{ .place }}</address>
+          <time>{{ .time }}</time>
+        </span>
+      </header>
+      <p>{{ .description }}</p>
+    </article>
+    {{ end }}
+  </section>
+{{ end }}
